@@ -1,0 +1,95 @@
+<html>
+<head>
+    <title>The MLP Memory Game</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+       .grid { 
+    width: 90%; 
+    height: 300px; 
+    display: flex; 
+    flex-wrap: wrap; 
+    margin: 60px auto; 
+    } 
+    
+    .grid img { 
+    margin: 2px; 
+    transform-style: preserve-3d; 
+    transition: transform 0.5s; 
+    } 
+    
+    .grid img.flip { 
+    transform: rotateY(180deg); 
+    } 
+    
+    .popup { 
+    background: rgb(131,58,180);
+    background: linear-gradient(8deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);; 
+    width: 200px; 
+    height: 200px; 
+    z-index:20;
+    position: fixed; 
+    top: 100px;
+    left: 100px; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column;
+    }
+    
+    .data { 
+    display: flex; 
+    justify-content: space-between; 
+    padding: 20px 30px; 
+    font-size: 23px; 
+    } 
+    
+    .data span { 
+    color: rgb(206, 121, 11);
+    font-size: 30px; 
+    }
+    
+    body {
+        background-image: url("bg_zalgo.png");
+    }
+    .about_image {
+        display: inline;
+    }
+    </style>
+</head>
+<body>
+    <audio autoplay loop>
+        <source src="creepy.mp3" type="audio/mp3">
+    </audio>
+<div class="container">
+    <div class="data">
+    <div class="score">Score : <span class="scoreBoard">0</span></div>
+    <button class="btn btn-warning"  data-toggle="modal" data-target="#myModal"><i class="fa fa-info-circle"></i></button>
+    </div>
+    <div class="grid">
+    <div class="popup">
+    <button class="playAgain">Next Level</button>
+    </div>
+    </div>
+    </div>
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                  <button class="close" data-dismiss="modal">&times;</button>
+                  <h4>About</h4>
+              </div>
+              <div class="modal-body">
+                  <center>
+        <img style="width: 100%;" src="creepo_info.png" alt="info class="about_image">
+        </center>
+              </div>
+            </div>
+        </div>
+      </div>
+    </body>
+    <script src="creepy.js"></script>
+    </html>
